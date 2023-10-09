@@ -1,0 +1,63 @@
+.container {
+  background-color: #333;
+  padding: 2rem;
+  text-align: center;
+  color: aliceblue;
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.advantage-cell {
+  width: 45%;
+  text-align: center;
+  margin: 1rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.order-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Займає повну ширину на мобільних пристроях */
+  box-sizing: border-box;
+}
+
+.order-button:hover {
+  background-color: #0056b3;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+  .advantage-cell {
+    width: 100%;
+  }
+}
